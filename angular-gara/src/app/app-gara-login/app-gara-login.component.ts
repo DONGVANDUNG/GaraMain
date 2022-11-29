@@ -1,12 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import {ModalDirective} from "ngx-bootstrap/modal";
 
 @Component({
-  selector: 'app-app-gara-login',
+  selector: 'app-gara-login',
   templateUrl: './app-gara-login.component.html',
   styleUrls: ['./app-gara-login.component.css']
 })
 export class AppGaraLoginComponent implements OnInit {
-
+  @ViewChild('logins') modal: ModalDirective;
   constructor() { }
 
   user = {
@@ -15,12 +16,15 @@ export class AppGaraLoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.login();
+    //this.login();
   }
 
-  login(){
-    if(this.user.password === "123" && this.user.username === "admin" ){
+  login() {
+    if (this.user.password === "123" && this.user.username === "admin") {
       window.location.href = "/home";
     }
+  }
+  show() {
+    this.modal.show();
   }
 }

@@ -1,1 +1,15 @@
-<p>employee works!</p>
+
+<button mat-raised-button style="margin-bottom: 20px;" (click)="viewDetail()">Xem chi Tiết</button>
+
+<ag-grid-angular #login
+style="width: 100%; height: 100%;"
+class="ag-theme-alpine"
+[rowData]="rowData"
+[columnDefs]="columnDefs"
+[rowSelection]="'multiple'"
+[defaultColDef]="defaultColDef"
+[animateRows]="true"
+(cellClicked)="onCellClicked($event)"
+>
+</ag-grid-angular>
+<app-gara-login #login></app-gara-login>

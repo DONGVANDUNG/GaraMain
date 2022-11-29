@@ -1,18 +1,20 @@
-<div class="body-login">
+<div bsModal aria-labelledby="logins" #logins="bs-modal" class="body-login"  [config]="{backdrop: 'static'}">
   <div class="avatar-gara"></div>
   <div class="form-login">
-      <div class="title-form">ĐĂNG NHẬP GARA Ô TÔ</div>
-      <div class="form">
-        <form class="" action="">
-          <label for="account" class="label">Tài khoản<span class="icon-account">*</span></label><br>
-          <input type="text" name="username" class="input" id="account" placeholder="Tên người dùng đăng nhập" [(ngModel)]="user.username">
-          <p class="note-account">Tài khoản phải chứa chữ cái, không được chứa số và kí tự đặc biệt</p><br>
+    <div class="title-form">ĐĂNG NHẬP GARA Ô TÔ</div>
+    <div class="form">
+      <form class="" action="">
+        <label for="account" class="label">Tài khoản<span class="icon-account">*</span></label><br>
+        <input type="text" name="username" class="input" id="account" placeholder="Tên người dùng đăng nhập"
+          [(ngModel)]="user.username">
+        <p class="note-account">Tài khoản phải chứa chữ cái, không được chứa số và kí tự đặc biệt</p><br>
 
-          <label for="password" class="label">Mật khẩu<span class="icon-account">*</span></label><br>
-          <input type="text" name="password" class="input" id="password" placeholder="Mật khẩu tài khoản đăng nhập" [(ngModel)]="user.password">
-          <p class="note-account">Tài khoản phải chứa chữ cái, không được chứa số và kí tự đặc biệt</p><br>
-          <button type="submit" (click)="login()" class="button-login">Đăng nhập</button>
-        </form>
-      </div>
+        <label for="password" class="label">Mật khẩu<span class="icon-account">*</span></label><br>
+        <input type="text" name="password" class="input" id="password" placeholder="Mật khẩu tài khoản đăng nhập"
+          [(ngModel)]="user.password">
+        <p class="note-account">Tài khoản phải chứa chữ cái, không được chứa số và kí tự đặc biệt</p><br>
+        <button type="submit" (click)="login()" class="button-login">Đăng nhập</button>
+      </form>
+    </div>
   </div>
 </div>
