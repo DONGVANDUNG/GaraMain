@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, Injector } from '@angular/core';
 import {ModalDirective} from "ngx-bootstrap/modal";
 
 @Component({
@@ -6,10 +6,8 @@ import {ModalDirective} from "ngx-bootstrap/modal";
   templateUrl: './app-gara-login.component.html',
   styleUrls: ['./app-gara-login.component.css']
 })
-export class AppGaraLoginComponent implements OnInit {
+export class AppGaraLoginComponent implements OnInit  {
   @ViewChild('logins') modal: ModalDirective;
-  constructor() { }
-
   user = {
     username: "",
     password: "",

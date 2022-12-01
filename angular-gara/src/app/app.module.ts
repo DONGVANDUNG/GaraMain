@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { ProductComponent } from './product/product.component';
 import { ListProductComponent } from './list-product/list-product.component'
 import { AgGridModule } from 'ag-grid-angular';
+import { AppNavigationComponent } from './app-navigation/app-navigation.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { AgGridModule } from 'ag-grid-angular';
     AppGaraLoginComponent,
     ProductComponent,
     ListProductComponent,
+    AppNavigationComponent
   ],
   imports: [
     BrowserModule,

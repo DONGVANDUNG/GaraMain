@@ -2,7 +2,6 @@ import { outputAst } from '@angular/compiler';
 import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 import { AgGridAngular } from 'ag-grid-angular';
 import { CellClickedEvent, ColDef } from 'ag-grid-community';
-import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { AppGaraLoginComponent } from '../app-gara-login/app-gara-login.component';
 
 @Component({
@@ -14,7 +13,6 @@ export class EmployeeComponent implements OnInit {
   @Output() onChangeSelections = new EventEmitter();
   @ViewChild("login", { static: false }) login: AppGaraLoginComponent;
   employeeSelected: any;
-  modalRef: BsModalRef;
   columnDefs = [
     { field: 'make' },
     { field: 'model' },
@@ -31,7 +29,7 @@ export class EmployeeComponent implements OnInit {
     { make: 'Ford', model: 'Mondeo', price: 32000, filter: true },
     { make: 'Porsche', model: 'Boxter', price: 72000, filter: true }
   ];
-  constructor(private modalService: BsModalService) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
